@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="GifEditorWindowController" customModule="testrecorder" customModuleProvider="target">
+            <connections>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Gif Editor" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <view key="contentView" wantsLayer="YES" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="886" height="404"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9kx-oH-Iag">
+                        <rect key="frame" x="10" y="10" width="866" height="384"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="byn-Re-CG2"/>
+                    </imageView>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rKX-BO-uIV">
+                        <rect key="frame" x="216" y="346" width="48" height="48"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="o8Y-Wd-O2I"/>
+                    </imageView>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bbB-SA-Bwl">
+                        <rect key="frame" x="34" y="3" width="92" height="41"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="44i-dW-Fnz"/>
+                            <constraint firstAttribute="width" constant="80" id="eH7-be-qbh"/>
+                        </constraints>
+                        <buttonCell key="cell" type="push" title="Reverse" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="h3k-UD-HBZ">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="k9w-Hw-XrN">
+                        <rect key="frame" x="144" y="3" width="92" height="41"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="6Qv-v0-dRH"/>
+                            <constraint firstAttribute="width" constant="80" id="TCi-1K-A89"/>
+                        </constraints>
+                        <buttonCell key="cell" type="push" title="Ping Pong" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="T1H-2d-KQD">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                    </button>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I4Q-fu-nwn">
+                        <rect key="frame" x="10" y="50" width="866" height="344"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="test" id="Mzm-pQ-7kN"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="I4Q-fu-nwn" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="10" id="2tU-68-Tgz"/>
+                    <constraint firstAttribute="trailing" secondItem="9kx-oH-Iag" secondAttribute="trailing" constant="10" id="3zj-HC-isf"/>
+                    <constraint firstItem="k9w-Hw-XrN" firstAttribute="top" secondItem="I4Q-fu-nwn" secondAttribute="bottom" constant="10" id="DGS-di-3f2"/>
+                    <constraint firstItem="9kx-oH-Iag" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="10" id="FAG-g3-Ba2"/>
+                    <constraint firstItem="I4Q-fu-nwn" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="10" id="Gcf-Mh-6gs"/>
+                    <constraint firstAttribute="bottom" secondItem="9kx-oH-Iag" secondAttribute="bottom" constant="10" id="JAJ-fH-A7L"/>
+                    <constraint firstAttribute="bottom" secondItem="bbB-SA-Bwl" secondAttribute="bottom" constant="10" id="KSc-zt-bct"/>
+                    <constraint firstItem="bbB-SA-Bwl" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="40" id="U70-AM-hR7"/>
+                    <constraint firstAttribute="trailing" secondItem="I4Q-fu-nwn" secondAttribute="trailing" constant="10" id="XON-K3-ERa"/>
+                    <constraint firstItem="9kx-oH-Iag" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="10" id="sfK-mf-G6U"/>
+                    <constraint firstItem="k9w-Hw-XrN" firstAttribute="leading" secondItem="bbB-SA-Bwl" secondAttribute="trailing" constant="30" id="vcm-di-7tj"/>
+                    <constraint firstAttribute="bottom" secondItem="k9w-Hw-XrN" secondAttribute="bottom" constant="10" id="yU4-KF-wNi"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+            </connections>
+        </window>
+    </objects>
+    <resources>
+        <image name="test" width="866" height="344"/>
+    </resources>
+</document>
